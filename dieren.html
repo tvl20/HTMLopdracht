@@ -4,6 +4,7 @@
   	<title>Overzicht van dieren in Dierenasiel A</title>
   	<link rel="stylesheet" href="style.css" />
   	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  	<script type="text/javascript" src="code.js"></script>
   </head>
   <body>
   	<a href="index.html"><img src="Logo.PNG" alt="EEN MOOI LOGO"></a>
@@ -75,19 +76,23 @@
 
 	<h3>Dier toevoegen:</h3>
 	<form action="">
-		<input type="radio" name="typeDier" id="kat">Kat
+		<input type="radio" name="TypeDier" value="Kat">Kat
 		<br />
-		<input type="radio" name="typeDier" id="hond">Hond
+		<input type="radio" name="TypeDier" value="Hond">Hond
 		<br />
 
-  		<label for="naam">Naam</label>
-  		<input type="text" id="naam" />
+  		<label for="Naam">Naam</label>
+  		<input type="text" id="Naam" onfocus="$('#naamVerplicht').focus();" onblur="$('#naamVerplicht').blur()" />
+  		<p class="naamVerplicht">Dit veld is verplicht</p>
   		<br />
   		<label for="Leeftijd">Leeftijd</label>
   		<input type="text" id="Leeftijd" />
   		<br />
-  		<label for="Reg. Nr.">Reg. Nr.</label>
-  		<input type="text" id="Reg. Nr." />
+  		<label for="RegNr">Reg. Nr.</label>
+  		<input type="text" id="RegNr" />
+  		<br />
+  		<label for="Gereserveerd">Gereserveerd</label>
+  		<input type="checkbox" id="Gereserveerd" />
   		<br />
 
   		<input type="submit" value="Toevoegen" />

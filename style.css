@@ -48,3 +48,12 @@ input[type = submit]{
 input[type = submit]:hover{
 	cursor: pointer;
 }
+
+form p{
+	margin: 0;
+	display: inline-block;
+}
+
+.hidden{
+	display: none;
+}
