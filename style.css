@@ -1,0 +1,16 @@
+#alinea {
+	font-size: 14px;
+}
+
+body {
+	font-family: "Verdana";
+}
+
+#link {
+	color: #339933;
+	text-decoration: none;
+}
+
+#link:hover{
+	text-decoration: underline;
+}
