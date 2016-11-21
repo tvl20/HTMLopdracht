@@ -10,7 +10,14 @@ $(function(){
 	}
 });
 
+$(function() {
+	console.log('Pagina geladen, DOM klaar voor gebruik.');
+	$('#submit').click(OnSubmit);
+});
+
 function OnSubmit(event) {
+  event.preventDefault();
+
   var animal = {
   	'species':  $('input[name=TypeDier]:checked').val(),
   	'name':     $('#Naam').val(),
@@ -19,7 +26,11 @@ function OnSubmit(event) {
   	'reserved': $('#Gereserveerd').is(':checked')
   };
 
-  console.log(animal);
-  event.preventDefault();
+  console.log($('#Naam').val());
+  console.log(animal.name);
+  console.log(animal); 
+  
+
+  console.log(document.getElementById('Naam').value+"!!");
 }
-$('#submit').click(OnSubmit());
+
